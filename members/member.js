@@ -3,7 +3,10 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const mongoose = require('mongoose')
 const schema = new mongoose.Schema({
-  fullName: String,
+  fullName: {
+    type: String,
+    required: true
+  },
   gender: String,
   role: {
     type: String,
